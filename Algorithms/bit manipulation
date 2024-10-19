@@ -1,0 +1,36 @@
+//Check if the i-th bit is set or not
+#include <iostream>
+using namespace std;
+
+bool isSet(int n, int i) {
+    return (n & (1 << i)) != 0;
+}
+
+int main() {
+    int n = 5, i = 2;
+    if (isSet(n, i)) {
+        cout << "The " << i << "-th bit is set.";
+    } else {
+        cout << "The " << i << "-th bit is not set.";
+    }
+    return 0;
+}
+//Check if a number is odd or not
+#include <iostream>
+using namespace std;
+
+bool isOdd(int n) {
+    return n & 1;
+}
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+    if (isOdd(n)) {
+        cout << n << " is odd.";
+    } else {
+        cout << n << " is even.";
+    }
+    return 0;
+}
